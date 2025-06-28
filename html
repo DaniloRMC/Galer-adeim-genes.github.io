@@ -1,0 +1,18 @@
+<?php
+$imagenes = glob("imagenes/*.{jpg,png,gif}", GLOB_BRACE);
+?>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Galería de Imágenes</title>
+    <style>
+        img { width: 200px; height: auto; margin: 10px; }
+    </style>
+</head>
+<body>
+    <?php foreach ($imagenes as $imagen): ?>
+        <img src="<?php echo $imagen; ?>" alt="Imagen">
+    <?php endforeach; ?>
+</body>
+</html>
